@@ -1,0 +1,336 @@
+/*
+Authors:pengcheng zhang
+Date: 5/6/2023
+File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul, section, article, aside, figure, figcaption, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for body and images */
+body {
+    background-color: #ffcc66;
+	font-family: 'Merriweather', serif;
+}
+
+img{
+     max-width: 100%;
+     height: auto;;
+}
+
+.round {
+	border-radius: 7px;
+}
+
+/* Style rules for mobile viewport */
+
+.desktop {
+       display: none;
+    }
+
+.mobile-tab {
+		display: block;
+    }
+
+
+/* Style rules for header content */
+header {
+    text-align: center;
+    color: red;
+    padding: 1%;
+}
+
+header img {
+	display: block;
+	margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3em; 
+	text-shadow: 5px 5px 8px #213b45;
+	
+}
+
+header h3 {
+    font-style: italic;
+    font-size: 1.25em;
+    font-family: Futura, Arial, sans-serif;
+}
+
+/* Style rules for navigation area */
+nav {
+    background-color: brown;
+}
+
+nav ul {
+    list-style-type: none;	
+    text-align: center;
+	font-size: 1.25em;
+}
+
+nav li {
+    display: block;
+    font-size: 1.15em;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    border: 1px solid #e3eef2;
+    border-radius: 2px; 
+}
+
+nav li a {
+    display: inline;
+    color: #fff;
+    text-align: center;
+    padding: 3%;
+    text-decoration: none;
+}
+
+/* Style rules for main content */
+main {
+    padding: 2%;
+    background-color: #ffcc66;
+    font-family: 'Lato', sans-serif;
+}
+
+main h2 {
+    color: #213B45;
+	
+}
+
+main p {
+    color: #0F252E;
+    font-size: 1.25em;
+}
+
+main a {
+    text-decoration: none;
+    color: #417589;
+    font-weight: bold;
+}
+
+main ul {
+    list-style-type: square;
+    font-size: 1.15em;
+}
+
+article, figure {
+    padding: 2%;
+}
+
+figure {
+    border: 2px solid #000;
+    margin: 2% auto;
+    background-color: rgba(65, 117, 137, 0.4);
+    text-align: center;
+}
+
+figcaption {
+    padding: 2%;
+}
+
+section h1 {
+    font-size: 2.5em;
+}
+
+.action {
+    font-size: 1.25em;
+    color: #213b45;
+    font-weight: bold;
+    font-variant-caps: all-small-caps; 
+}
+
+.desserts {
+    border: 1px solid #417589;
+    padding: 2%;
+    background: rgba(65, 117, 137, 0.5);
+    box-shadow: 4px 4px 10px #000;
+}
+
+.desserts ul {
+    margin-left: 8%;
+}
+/* Style rules for form elements */
+fieldset, input, select, textarea  { 
+    margin-bottom: 1%;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+label {
+    display: block;
+    padding-top: 1%;
+}
+
+form #submit {
+    margin: 0 auto;
+    border: none;
+    display: block;
+    padding: 2%;
+    background-color: #a8c9d6;
+    font-size: 1em;
+    border-radius: 10px;
+	
+}
+
+/* Style rules for footer content */
+footer {
+    text-align: center;
+    font-size: 0.75em;
+    color: grey;
+    font-weight: bold;
+}
+
+footer a {
+    color: #e3eef2;
+    text-decoration: none;
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 600px), print {
+
+    
+   
+    nav li {
+        border: none;
+		display: inline-block;
+        font-size: 1.25em;	
+    }
+    
+    nav li a {
+        padding: 0.75em;
+    }
+    
+	section {
+        grid-column: 1 / span 2;
+    }
+	
+	.form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+    
+    .btn {
+        grid-column: 1 / span 3;
+    }
+    
+    
+    /* Desktop Viewport: Show tab-desk class, hide mobile class */
+	.desktop {
+        display: block;
+    }
+
+    .mobile-tab {
+        display: none;
+    }
+	
+	header {
+		color: black;
+	}
+  
+	nav ul {
+		font-size: 1.5em;
+	}
+  
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 20px;
+    }
+    
+    
+    /* Desktop Viewport: Style rules for nav area */
+	nav li {
+        display: inline-block;
+        font-size: 1.25em;
+        font-family: Verdana, Arial, sans-serif;
+        font-weight: bold;
+    }
+
+
+    nav li a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 0.5em;
+        text-decoration: none;
+    }
+    
+    nav li a:link {
+        color: #fff;
+    }
+    
+    nav li a:hover {
+        color: #74a9be;
+    }
+    
+    nav li a:active {
+        color: #8cb3d9;
+    }
+	
+    
+    /* Desktop Viewport: Style rules for main content */
+    main {
+        overflow: auto;
+    }
+    
+    figure {
+        max-width: 460px;
+    }
+	
+	
+    
+    /* Style rules for table */
+    table {
+        border: 1px solid #000;
+        border-collapse: collapse;
+        margin: 0 auto;
+        width: 100%;
+    }
+	
+	
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1%;
+    }
+    
+    th, td {
+        border: 1px solid #000;
+        padding: 1%;
+    }
+    
+    th {
+        background-color: #213b45;
+        color: #fff;
+        font-size: 1.15em;
+    } 
+	
+	form {
+		width: 70%;
+		margin: auto;
+	}
+    
+    /* Desktop Viewport: Style rules for footer content */
+    footer {
+        clear: left;
+    }
+    
+}
+
+@media print {
+    
+    body {
+        background-color:black;
+        color: white ;
+    }
+    
+}
+
